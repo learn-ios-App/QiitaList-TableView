@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B359D8B29D7C35300A9E776 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B359D8A29D7C35300A9E776 /* Kingfisher */; };
 		8B52656E29D41EC60049A99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52656D29D41EC60049A99E /* AppDelegate.swift */; };
 		8B52657029D41EC60049A99E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52656F29D41EC60049A99E /* SceneDelegate.swift */; };
 		8B52657529D41EC60049A99E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B52657329D41EC60049A99E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B359D8B29D7C35300A9E776 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +64,42 @@
 		8B52656C29D41EC60049A99E /* Sample-TableView */ = {
 			isa = PBXGroup;
 			children = (
-				8B52656D29D41EC60049A99E /* AppDelegate.swift */,
-				8B52656F29D41EC60049A99E /* SceneDelegate.swift */,
-				8B52658129D41EFE0049A99E /* TableViewController.swift */,
-				8B52658329D464480049A99E /* ArticleAPIClient.swift */,
-				8B52658729D464CB0049A99E /* Article.swift */,
-				8B52658529D4649B0049A99E /* APIError.swift */,
-				8B52657329D41EC60049A99E /* Main.storyboard */,
+				8B52658B29D4701A0049A99E /* Controller */,
+				8B52658929D46D7A0049A99E /* Model */,
+				8B52658A29D470050049A99E /* Views */,
 				8B52657629D41EC70049A99E /* Assets.xcassets */,
 				8B52657829D41EC70049A99E /* LaunchScreen.storyboard */,
 				8B52657B29D41EC70049A99E /* Info.plist */,
 			);
 			path = "Sample-TableView";
+			sourceTree = "<group>";
+		};
+		8B52658929D46D7A0049A99E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B52658329D464480049A99E /* ArticleAPIClient.swift */,
+				8B52658729D464CB0049A99E /* Article.swift */,
+				8B52658529D4649B0049A99E /* APIError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B52658A29D470050049A99E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B52657329D41EC60049A99E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B52658B29D4701A0049A99E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B52656F29D41EC60049A99E /* SceneDelegate.swift */,
+				8B52656D29D41EC60049A99E /* AppDelegate.swift */,
+				8B52658129D41EFE0049A99E /* TableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +118,9 @@
 			dependencies = (
 			);
 			name = "Sample-TableView";
+			packageProductDependencies = (
+				8B359D8A29D7C35300A9E776 /* Kingfisher */,
+			);
 			productName = "Sample-TableView";
 			productReference = 8B52656A29D41EC60049A99E /* Sample-TableView.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 8B52656129D41EC60049A99E;
+			packageReferences = (
+				8B359D8929D7C35300A9E776 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8B52656B29D41EC60049A99E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B359D8929D7C35300A9E776 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B359D8A29D7C35300A9E776 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B359D8929D7C35300A9E776 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B52656229D41EC60049A99E /* Project object */;
 }
